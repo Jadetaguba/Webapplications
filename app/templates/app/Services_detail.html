@@ -9,4 +9,6 @@
             <p>Frequency: {{ services.frequency }}</p>
             <p>Status: {{ services.status }}</p>
         </div>
+        <p><a href="{% url 'service_update' services.pk %}">+ Edit Services</a></p>
+        <p><a href="{% url 'service_delete' services.pk %}">- Delete Services</a></p>
 {% endblock content %}

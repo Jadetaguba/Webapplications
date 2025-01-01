@@ -2,14 +2,15 @@
 {% load static %}
 {% block content %}
         <div class="employees">
-            <h2>Employee ID: <a href=" ">{{ employees.employees_id }}</a></h2>
-            <p>Name: {{ employee.first_name }} {{ employees.last_name }}</p>
+            <h2>Employee ID: {{ employees.employee_id }}</h2>
+            <p>Name: {{ employees.first_name }} {{ employees.last_name }}</p>
             <p>Gender: {{ employees.gender }}</p>
             <p>Contact: {{ employees.contacts }}</p>
             <p>Email address: {{ employees.email }}</p>
             <p>Job Title: {{ employees.job_title }}</p>
             <p>Hire date: {{ employees.hire_date }}</p>
             <p>Employment type: {{ employees.employment_type }}</p>
-        
         </div>
+        <p><a href="{% url 'employee_update' employees.pk %}">+ Edit Employee</a></p>
+        <p><a href="{% url 'employee_delete' employees.pk %}">+ Delete Employee</a></p>
 {% endblock content %}

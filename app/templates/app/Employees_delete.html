@@ -1,0 +1,10 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+    <h1>Delete Employee</h1>
+    <form action="{% url 'employee_delete' emp.pk %}" method="post">
+        {% csrf_token %}
+        <p> You want to delete this" {{ employees.employee_id }}?</p>
+        <input type="submit" value="Delete">
+    </form>
+{% endblock content %}

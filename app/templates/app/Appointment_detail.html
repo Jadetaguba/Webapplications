@@ -8,4 +8,6 @@
             <p>Notes: {{ appointments.notes }}</p>
             <p>Location: {{ appointments.location }}</p>
         </div>
+        <p><a href="{% url 'appointment_update' appointments.pk %}">+ Edit Appointments</a></p>
+        <p><a href="{% url 'appointment_delete' appointments.pk %}">- Delete Appointments</a></p>
 {% endblock content %}

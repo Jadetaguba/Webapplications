@@ -1,6 +1,7 @@
 {% extends 'app/base.html' %}
 {% load static %}
 {% block content %}
+    <p><a href="{% url 'service_create' %}">+ New Customers </a></p>
     {% for service in services %}
         <div class="Services-entry">
             <h2>Services: <a href="{%url 'service_detail' service.pk%}">{{ service.service_type }}</a></h2>

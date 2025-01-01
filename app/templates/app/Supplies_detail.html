@@ -6,4 +6,6 @@
             <p>Name of employee: {{ supplies.employees }}</p>
             <p>Description: {{ supplies.description }}</p>
         </div>
+        <p><a href="{% url 'supplies_update' supplies.pk %}">+ Edit Supplies</a></p>
+        <p><a href="{% url 'supplies_delete' supplies.pk %}">- Delete Services</a></p>
 {% endblock content %}

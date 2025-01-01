@@ -1,6 +1,7 @@
 {% extends 'app/base.html' %}
 {% load static %}
 {% block content %}
+    <p><a href="{% url 'supplies_create' %}">+ New Supplies </a></p>
     {% for supplies in supplies %}
         <div class="supplies-entry">
             <h2>Name of equipment: <a href="{%url 'supplies_detail' supplies.pk%}">{{ supplies.equipment_name }}</a></h2>

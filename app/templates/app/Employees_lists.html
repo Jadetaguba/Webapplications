@@ -1,6 +1,7 @@
 {% extends 'app/base.html' %}
 {% load static %}
 {% block content %}
+    <p><a href="{% url 'employee_create' %}">+ New Employees</a></p>
     {% for employee in employees %}
         <div class="Employee-entry">
             <h2>Employee ID: <a href="{%url 'employee_detail' employee.pk%}">{{ employee.employee_id }}</a></h2>

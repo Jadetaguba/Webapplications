@@ -1,0 +1,10 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+    <h1>Edit Customer</h1>
+        <form action="{% url 'customer_delete' cust.pk %}" method="post">
+            {% csrf_token %}
+            <p> You want to delete this" {{ customers.Fname }} {{ customers.Lname }}?</p>
+            <input type="submit" value="Delete">
+        </form>
+{% endblock content %}

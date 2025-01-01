@@ -1,13 +1,14 @@
 {% extends 'app/base.html' %}
 {% load static %}
 {% block content %}
-    {% for appointment in appointments %}
-        <div class="appointment-entry">
-            <h2>Name: <a href={%url 'appointment_detail' appointment.pk %} ">{{ appointment.customer }}</a></h2>
-            <p>Date and Time: {{ appointment.appointment_date }}</p>
-            <p>Type of appointment: {{ appointment.appointment_type }}</p>
-            <p>Notes: {{ appointment.notes }}</p>
-            <p>Location: {{ appointment.location }}</p>
-        </div>
-    {% endfor %}
+    <p><a href="{% url 'appointment_create' %}">+ New Appointments </a></p>
+        {% for appointment in appointments %}
+            <div class="appointment-entry">
+                <h2>Name: <a href="{% url 'appointment_detail' appointment.pk %} ">{{ appointment.customer }}</a></h2>
+                <p>Date and Time: {{ appointment.appointment_date }}</p>
+                <p>Type of appointment: {{ appointment.appointment_type }}</p>
+                <p>Notes: {{ appointment.notes }}</p>
+                <p>Location: {{ appointment.location }}</p>
+            </div>
+        {% endfor %}
 {% endblock content %}

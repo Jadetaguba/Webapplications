@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 class Customer(models.Model):
     customer_id = models.AutoField(primary_key=True)
@@ -10,6 +11,8 @@ class Customer(models.Model):
 
     def __str__(self):
         return f"{self.Fname} {self.Lname}"
+    def get_absolute_url(self):
+        return reverse("customer_detail", kwargs={"pk": self.pk})
 
 class Appointment(models.Model):
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE, related_name="appointments")
@@ -20,6 +23,8 @@ class Appointment(models.Model):
 
     def __str__(self):
         return self.appointment_type
+    def get_absolute_url(self):
+        return reverse("appointment_detail", kwargs={"pk": self.pk})
 
 class Employee(models.Model):
     JOB_TITLES = [
@@ -40,6 +45,8 @@ class Employee(models.Model):
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
+    def get_absolute_url(self):
+        return reverse("employee_detail", kwargs={"pk": self.pk})
 
 class Supplies(models.Model):
     equipment_name = models.CharField(max_length=15)
@@ -48,6 +55,8 @@ class Supplies(models.Model):
 
     def __str__(self):
         return self.equipment_name
+    def get_absolute_url(self):
+        return reverse("supplies_detail", kwargs={"pk": self.pk})
 
 class Service(models.Model):
     SERVICE_TYPES = [
@@ -64,3 +73,5 @@ class Service(models.Model):
 
     def __str__(self):
         return self.service_type
+    def get_absolute_url(self):
+        return reverse("service_detail", kwargs={"pk": self.pk})
