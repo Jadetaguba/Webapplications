@@ -1,0 +1,10 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+        <div class="customers">
+            <h2>Name: {{ customers.Fname }} {{ customers.Lname }}</h2>
+            <p>Gender: {{ customers.gender }}</p>
+            <p>Contact: {{ customers.contacts }}</p>
+            <p>Email address: {{ customers.email_address }}</p>
+        </div>
+{% endblock content %}

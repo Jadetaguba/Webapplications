@@ -1,0 +1,12 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+    {% for customer in customers %}
+        <div class="customer-entry">
+            <h2>Name: <a href="{%url 'customer_detail' customer.pk%}">{{ customer.Fname }} {{ customer.Lname }}</a></h2>
+            <p>Gender: {{ customer.gender }}</p>
+            <p>Contact: {{ customer.contacts }}</p>
+            <p>Email address: {{ customer.email_address }}</p>
+        </div>
+    {% endfor %}
+{% endblock content %}

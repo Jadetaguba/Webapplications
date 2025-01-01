@@ -1,0 +1,16 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+    {% for employee in employees %}
+        <div class="Employee-entry">
+            <h2>Employee ID: <a href="{%url 'employee_detail' employee.pk%}">{{ employee.employee_id }}</a></h2>
+            <p>Name: {{ employee.first_name }} {{ employee.last_name }}</p>
+            <p>Gender: {{ employee.gender }}</p>
+            <p>Contact: {{ employee.contacts }}</p>
+            <p>Email address: {{ employee.email }}</p>
+            <p>Job Title: {{ employee.job_title }}</p>
+            <p>Hire date: {{ employee.hire_date }}</p>
+            <p>Employment type: {{ employee.employment_type }}</p>
+        </div>
+    {% endfor %}
+{% endblock content %}

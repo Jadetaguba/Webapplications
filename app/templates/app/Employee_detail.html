@@ -1,0 +1,15 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+        <div class="employees">
+            <h2>Employee ID: <a href=" ">{{ employees.employees_id }}</a></h2>
+            <p>Name: {{ employee.first_name }} {{ employees.last_name }}</p>
+            <p>Gender: {{ employees.gender }}</p>
+            <p>Contact: {{ employees.contacts }}</p>
+            <p>Email address: {{ employees.email }}</p>
+            <p>Job Title: {{ employees.job_title }}</p>
+            <p>Hire date: {{ employees.hire_date }}</p>
+            <p>Employment type: {{ employees.employment_type }}</p>
+        
+        </div>
+{% endblock content %}

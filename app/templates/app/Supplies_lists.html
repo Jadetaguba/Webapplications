@@ -1,0 +1,11 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+    {% for supplies in supplies %}
+        <div class="supplies-entry">
+            <h2>Name of equipment: <a href="{%url 'supplies_detail' supplies.pk%}">{{ supplies.equipment_name }}</a></h2>
+            <p>Name of employee: {{ supplies.employees }}</p>
+            <p>Description: {{ supplies.description }}</p>
+        </div>
+    {% endfor %}
+{% endblock content %}

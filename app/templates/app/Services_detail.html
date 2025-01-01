@@ -1,0 +1,12 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+        <div class="services">
+            <h2>Services: <a href=" ">{{ services.service_type }}</a></h2>
+            <p>Description: {{ services.service_description }}</p>
+            <p>Duration: {{ services.service_duration }}</p>
+            <p>Cost: {{ services.service_cost }}</p>
+            <p>Frequency: {{ services.frequency }}</p>
+            <p>Status: {{ services.status }}</p>
+        </div>
+{% endblock content %}

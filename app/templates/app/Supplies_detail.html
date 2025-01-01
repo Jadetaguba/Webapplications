@@ -1,0 +1,9 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+        <div class="supplies">
+            <h2>Name of equipment: <a href=" ">{{ supplies.equipment_name }}</a></h2>
+            <p>Name of employee: {{ supplies.employees }}</p>
+            <p>Description: {{ supplies.description }}</p>
+        </div>
+{% endblock content %}

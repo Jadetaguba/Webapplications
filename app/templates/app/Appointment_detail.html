@@ -1,0 +1,11 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+        <div class="appointment-entry">
+            <h2>Name:{{ appointments.customer }}</h2>
+            <p>Date and Time: {{ appointments.appointment_date }}</p>
+            <p>Type of appointment: {{ appointments.appointment_type }}</p>
+            <p>Notes: {{ appointments.notes }}</p>
+            <p>Location: {{ appointments.location }}</p>
+        </div>
+{% endblock content %}

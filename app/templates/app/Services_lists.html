@@ -1,0 +1,14 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+    {% for service in services %}
+        <div class="Services-entry">
+            <h2>Services: <a href="{%url 'service_detail' service.pk%}">{{ service.service_type }}</a></h2>
+            <p>Description: {{ service.service_description }}</p>
+            <p>Duration: {{ service.service_duration }}</p>
+            <p>Cost: {{ service.service_cost }}</p>
+            <p>Frequency: {{ service.frequency }}</p>
+            <p>Status: {{ service.status }}</p>
+        </div>
+    {% endfor %}
+{% endblock content %}
