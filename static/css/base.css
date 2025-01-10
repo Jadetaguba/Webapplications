@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: darkgray;
+    background-color: white;
 }
 
 .Logo{
@@ -11,7 +11,7 @@ body {
 }
 
 .navbar {
-    background-color: grey;
+    background-color: lightgreen;
     padding: 15px;
 }
 
@@ -35,7 +35,7 @@ body {
 .nav-links a {
     font-size: 25px;
     font-weight: bold;
-    color: black;
+    color: grey;
     text-decoration: none;
 }
 h2{
@@ -46,7 +46,7 @@ h2{
     max-width: 400px;
     margin: 50px auto;
     padding: 20px;
-    background: grey;
+    background: lightgreen;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
@@ -92,7 +92,7 @@ p{
 
 footer {
     margin-top: 10%;
-    background-color: grey;
+    background-color: lightgreen;
     color: black;
     text-align: center;
     padding: 20px 0;
